@@ -18,8 +18,6 @@ if(isset($_POST['submit'])){
         $message[] = 'Reservation failed';
     }
 
-    header("Location: " . $_SERVER['PHP_SELF'] . "?status=" . urlencode(implode(',', $message)));
-    exit();
 }
 
 ?>
@@ -47,11 +45,11 @@ if(isset($_POST['submit'])){
                     <img src="images/unoreserve.svg">
                 </a>
                 <nav class="nav">
-                    <a href="#Home">Home</a>
-                    <a href="#About">About</a>
-                    <a href="#Experience">Experience</a>
-                    <a href="#Reviews">Reviews</a>
-                    <a href="#Contact">Contact</a>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#contact">Contact</a>
                 </nav>
 
                 <a href="#Contact" class="link-btn">Make Reservation</a>
@@ -289,6 +287,12 @@ if(isset($_POST['submit'])){
     </div>
 
     <div class="credit"> &copy; copyright @ <?php echo date('Y'); ?> by <span>UNO Reserve</span>  </div>
+    
+    <script>
+            if (window.history.replaceState) {
+                window.history.replaceState(null, null, window.location.href);
+            }
+    </script>
 
    </section>
 
